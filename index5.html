@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+    </head>
+    <body>  
+        <div>
+            <p>This is first </p>
+            <p>This is second</p>
+            <p>This is third</p>
+            </div>
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <script>
+          $(function () {
+          alert($("p:last").text());
+             }); 
+             
+             $(function () {
+             $("p:last").text("This is a third line text");
+              });   
+        </script>
+    </body>
+</html> 

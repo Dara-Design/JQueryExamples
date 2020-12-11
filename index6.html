@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+    </head>
+ <body>
+    <ul id="list1">
+    <li class="plava">Stavka 1</li>
+    <li class="plava">Stavka 2</li>
+    <li class="crvena">Stavka 3</li>
+    <li class="crvena">Stavka 4</li>
+    </ul>
+    <p class="plava">Ovo je paragraf 1</p>
+    <p class="text-left">Ovo je paragraf 2</p>
+    <p class="crvena">Ovo je paragraf 3</p>
+    <p class="text-center">Ovo je paragraf 4</p> 
+    <p >Ovo je paragraf 5</p>
+    <p >Ovo je paragraf 6</p>
+    <p >Ovo je paragraf 7</p> 
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        // JQuery function css()
+        //diferent type of selectors,not all included
+          
+       
+        $(function () {
+            //class name
+        $(".plava").css("border", "2px solid blue");
+        }); 
+       
+        $(function () {
+            // selected every odd
+        $("p:odd").css("border", "2px solid yellow");
+        });
+        $(function () {
+            // selected every even
+        $("p:even").css("border", "2px solid red");
+        });
+    
+       $(function () {
+           // class attribute must start with text
+       $("p[class^=text]").css("border", "2px solid black");
+       });
+       $(function () {
+           // must end with na
+       $("p[class$=na]").css("border", "2px solid red");
+       });
+       $(function () {
+           //must contain xt
+       $("p[class*=xt]").css("border", "2px solid blue");
+        });
+</script>
+    </body>
+</html>     
+
+
+
+
+

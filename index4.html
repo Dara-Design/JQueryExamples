@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+    </head>
+    <body>  
+        <div>
+            <ul id="list1">
+            <li>Line 1</li>
+            <li>Line 2</li>
+            </ul>
+            </div>
+            <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+            <script>
+                //JQuery function html()
+                $(function () {
+                alert($("#list1").html());
+                   });
+
+                   $(function () {
+                   $("li:first").html("First line");
+                    });
+                </script>
+             </body>
+</html> 
