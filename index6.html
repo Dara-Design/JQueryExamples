@@ -52,6 +52,34 @@
            //must contain xt
        $("p[class*=xt]").css("border", "2px solid blue");
         });
+
+        $(function () {
+        $("p:last").css("border", "2px solid purple");
+         });
+         $(function () {
+         $("li.plava:first").css("border", "2px solid green");
+         $("li.crvena:last").css("border", "2px solid green");
+         });
+
+         /*
+         $(function () {
+             // selects every index of p, except [0]
+          $("p:gt(0)").css("border", "3px solid red");
+         });
+         $(function () {
+             // selects up to p[2] - p[0] and p[1];
+          $("p:lt(2)").css("border", "3px solid red");
+         });
+         $(function () {
+             // selects only specific index p[1]
+         $("p:eq(1)").css("border", "2px solid green");
+            });
+          $(function () {
+              //selects all other indexes exept that one p[2]
+           $("p:not(:eq(2))").css("border", "2px solid green");
+            });  
+         */
+
 </script>
     </body>
 </html>     
