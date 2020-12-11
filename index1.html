@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+    </head>
+    <body>  
+        <form>
+            <label for="Text1">Enter first number</label><br>
+            <input id="Text1" type="text">
+            <br />
+            <label for="Text2">Enter second number</label><br>
+            <input id="Text2" type="text"><br >
+            <br />
+            <br />
+            <input id="Button1" type="button" value="Calculate"
+            onclick="Calculate()">
+            </form>
+           
+            <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+            <script>
+                function Calculate() {
+                var first = $("#Text1").val();
+                var a = parseFloat(first);
+                var second = $("#Text2").val();
+                var b = parseFloat(second);
+                var sum = a + b;
+                alert("Sum is " + sum);
+                $("#Text1").val("");
+                $("#Text2").val("");
+                }
+                </script>
+             </body>
+</html>     
