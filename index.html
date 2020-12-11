@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+    </head>
+    <body>  
+        <form>
+            <input id="Checkbox1" type="checkbox" name="Checkbox1" value="true" />
+            <label for="Checkbox1">Opcija1</label><br />
+            <input id="Checkbox2" type="checkbox" name="Checkbox2" value="true" />
+            <label for="Checkbox2">Opcija2</label><br />
+            <input id="Checkbox3" type="checkbox" name="Checkbox3" value="true" />
+            <label for="Checkbox3">Opcija3</label><br />
+            <br />
+            <button type="button" onclick="Prikazi()">Prikazi</button>
+            </form>
+            <br />
+            <br />
+            <span id="span1"></span>
+            
+           
+            <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+            <script>
+               function Prikazi() {
+                var labela = $("#span1");
+                 labela.html("");
+                 if ($("#Checkbox1").prop("checked")) {
+                 labela.append("Opcija1<br>");
+                 }
+                 if ($("#Checkbox2").prop("checked")) {
+                labela.append("Opcija2<br>");
+                  }
+                if ($("#Checkbox3").prop("checked")) {
+                 labela.append("Opcija3<br>");
+                 }
+                }
+                </script>
+             </body>
+</html>     
