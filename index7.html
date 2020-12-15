@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+    </head>
+    <body>  
+        <table id="table1">
+            <thead>
+            <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>Marko</td>
+            <td>Markovic</td>
+            <td>25</td>
+            </tr>
+            <tr>
+            <td>Jovan</td>
+            <td>Mikic</td>
+            <td>24</td>
+            </tr>
+            </tbody>
+            </table>
+            <button>Show</button>
+           
+            <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+            <script>
+         //direct events, JQuery function on()
+         //only when it's active-on click
+         /*$("#table1 tbody tr").on("click", function () {
+         alert($(this).find("td:eq(0)").text());
+         });
+         */
+         //delegation of events
+         //also on click
+        $( "#table1 tbody" ).on( "click", "tr", function() {
+          alert($(this).find("td:eq(0)").text());
+           });
+
+        $("button").on("click",Show);
+        function Show() {
+        alert("Click");
+        }
+        // or this:
+       /* $("button").on("click", function () {
+        alert("Click");
+        }
+        */
+);
+</script>  
+        </script>
+</body>
+</html>     
