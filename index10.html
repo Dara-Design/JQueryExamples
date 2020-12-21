@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #div1 {
+            width: 250px;
+            height: 180px;
+            background-color: #d695d1;
+            border: 2px solid rgb(230, 197, 219);
+            }
+            </style>
+
+    </head>
+    <body>  
+        <div>
+            <h2>Tittle</h2>
+            <input id="Button1" type="button" value="with duration" />
+            <p>
+            Example hide/show/toggle function with duration
+            </p>
+
+            <div id="div1">
+            </div>
+            <br />
+            <input id="ButtonShow" type="button" value="Show" />
+            <input id="ButtonHide" type="button" value="Hide" />
+            <input id="ButtonToggle" type="button" value="Toggle" />
+            <br />
+            <br />
+            <img id="sl1" src="/Pictures/1.jpg" width="200"/> 
+            <br />
+            <p id="p1">
+               Show/Hide picure with callback and duration
+            </p>
+            <input id="ButtonShowPicture" type="button" value="Show picture" onclick="ShowPicture()"
+            disabled >
+            <input id="ButtonHidePicture" type="button" value="Hide picture" onclick="HidePicture()"><br>
+            <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+            <script>
+            $(function () {
+            $("#Button1").click(function () {
+            $("h2").toggle(2000);
+             });
+            });     
+            $(function () {
+            $("#ButtonShow").click(function () {
+            $("#div1").show("fast");
+            });
+            $("#ButtonHide").click(function () {
+            $("#div1").hide("slow");
+            });
+            $("#ButtonToggle").click(function () {
+            $("#div1").toggle("slow");
+            });
+            });
+
+            function HidePicture() {
+            $("#sl1").hide(2000, AfterHiding);
+            }
+            function AfterHiding() {
+            $("#ButtonShowPicture").removeAttr("disabled");
+            $("#ButtonHidePicture").attr("disabled", "true");
+            $("#p1").text("Picture is hidden.");
+            }
+            function ShowPicture() {
+            $("#sl1").show(2000, AfterShowing);
+            }
+            function AfterShowing() {
+            $("#ButtonHidePicture").removeAttr("disabled");
+            $("#ButtonShowPicture").attr("disabled", "true");
+            $("#p1").text("");
+            }
+            </script>
+            </div>
+           
+          
+    </body>
+</html>     

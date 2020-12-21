@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+
+    </head>
+    <body>
+        <input id="Button1" type="button" value="Show" onclick="Show()"/>
+        <input id="Button2" type="button" value="Hide" onclick="Hide()" />
+        <input id="Button3" type="button" value="Show/Hide" onclick="Toggle()" />
+        <br />
+        <img id="img1" src="/Pictures/1.jpg" />
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <script>
+        // show, hide, toggle functions
+        function Show() {
+        $("#img1").show();
+        }
+        function Hide() {
+        $("#img1").hide();
+        }
+        
+        function Toggle() {
+        $("#img1").toggle(1000);
+        }
+        </script>
+        </body>
+            
+     
+</html>     
